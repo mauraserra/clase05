@@ -76,7 +76,7 @@
                     createElement("p", data.weather[0].description + " " + lugar + ", con una temperatura de " + Math.round(data.main.temp) + "ºC.").parent(texto);
                     console.log(data);
                     //vamos a buscar un ícono provisorio en https://openweathermap.org/weather-conditions
-                    imagen.setAttribute("src", "http://openweathermap.org/img/wn/" + data.weather[0].icon + "@4x.png");
+                    imagen.setAttribute("src", "images" + data.weather[0].icon + ".svg");
 
                     if (seleccionada == 1) {
                         selectAll("nav a")[1].addClass("active");
