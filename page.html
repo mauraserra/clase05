@@ -39,7 +39,7 @@
 
             if (seleccionada == 1) {
                 function preload() {
-                    data = loadJSON("https://api.openweathermap.org/data/2.5/weather?q=Barcelona,sp&units=metric&appid=48c666ddc502400a9dac194f0bef9edd&lang=es");
+                    data = loadJSON("https://api.openweathermap.org/data/2.5/weather?q=Barcelona,es&units=metric&appid=48c666ddc502400a9dac194f0bef9edd&lang=es");
                 }
             } else if (seleccionada == 2) {
                 function preload() {
@@ -85,6 +85,14 @@
                     } else {
                         selectAll("nav a")[3].addClass("active");
                     }
+                    
+                    if ((data.weather[0].icon).includes('d')){
+                        
+                        document.querySelector("body").style.backgorund = "linerar-gradient(#f4ffff,#clcdeS)";
+                    } else {
+                        document.querySelector("body").style.background = "linear-gradient(#000,#333)";
+                    }
+                        
                 } else {
                     createElement("p", data).parent(texto);
                 }
